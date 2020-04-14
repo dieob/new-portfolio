@@ -1,0 +1,377 @@
+@keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20rem); }
+    80% {
+      transform: translateX(-1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } 
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInScaled {
+    0% {
+        opacity: 0;
+        transform:scale(0);
+    }
+
+    50% {
+        opacity: .5;
+        transform:scale(.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+
+.main{
+    margin-top: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.body{
+    background-color: tomato;
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.parallax {
+    /* Set a specific height */
+    min-height: 95vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.initial-margin-top{
+    margin-top: 80vh;
+}
+
+.back-img-first{
+    background-image: url("images/image-4.jpg");
+    opacity: .7;
+}
+
+.back-img-second{
+    background-image: url("images/image-5.jpg");
+    opacity: 1.2;
+}
+
+.back-img-third{
+    background-image: url("images/image-2.jpg");
+}
+
+.back-img-fourth{
+    background-image: url("images/image-6.jpg");
+}
+
+.title-section{
+    height: fit-content;
+    width: auto;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 100;
+    transform: translateY(-3rem);
+    left: 5%;
+    overflow: hidden;
+}
+
+.btn-download{
+    float: right;
+    height: 3rem;
+    width: auto;
+    margin-right: 15%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline-offset: .5rem;
+}
+
+.btn-download:hover{
+    transform: scale(1.4) translateY(-1rem); 
+    transition: all .3s;
+    outline: 1.5rem solid blue;
+}
+
+.back-solid{
+    background-color: rgb(5, 45, 85);
+    opacity: 1;
+}
+
+.heading-primary{
+    font-size: 3.5rem;
+    text-align: center;
+    color: white;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
+
+.main-photo {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(black, .1);
+    background-color:rgba(white, .6);
+    border-radius: 3px;
+    padding-top: 2rem;
+    top: 0;
+    position: absolute;
+}
+
+.main-photo .shape{
+    width: 15rem;
+    height: 20rem;
+    shape-outside: circle(90% at 50% 50%);
+    clip-path: circle(70% at 50% 50%);
+    position: relative;
+    float: left;
+    left: 20%;
+}
+
+.img{
+    height: 100%;
+    transform: translate(-2rem, 3.6rem) scale(1.6);
+}
+
+.caption{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.title-container{
+    text-align: center;
+    display: block;
+    float: left;
+    margin-left: 6rem;
+    margin-top: 10%;
+}
+
+.image-container{
+    display: block;
+    float: left;
+    margin: 5%;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.about{
+    width: 70%;
+    padding-top: 6rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: justify;
+    text-justify: inter-word;
+    color: whitesmoke;
+}
+
+.container-text{
+    margin: 0 auto;
+    width: fit-content;
+    background-color: white;
+    transform: skewX(-20deg);
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+.container-text .name{
+    font-size: 4rem;
+    font-weight: 800;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    transform: skewX(20deg);
+}
+
+.container-text .position{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    transform: skewX(20deg);
+}
+
+.footer{
+    height: 10rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.margin-top-big{
+    margin-top: 6rem !important;
+}
+
+.margin-left-big{
+    margin-left: 15% !important;
+}
+
+.margin-left-small{
+    margin-left: 5% !important;
+}
+
+.smaller-parallax{
+    min-height: 70vh !important;
+}
+
+.info-container{
+    background-color: whitesmoke;
+    transform: skewX(-20deg);
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.contact-text{
+    font-size: 2rem;
+    transform: skewX(20deg);
+    padding-left: 2rem;
+}
+
+.line{
+    width: 60%;
+    margin-right: 40%;
+    left: 0;
+    opacity: .6;
+    color: whitesmoke;
+}
+
+.footer-text{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    letter-spacing: .2rem;
+}
+
+.copyright-text{
+    font-size: 1rem;
+    color: whitesmoke;
+    letter-spacing: .2rem;
+    margin-top: 30%;
+}
+
+.social-icon{
+    font-size: 3rem;
+    margin-right: 1rem;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.social-icon:hover{
+    background-color: white;
+    padding: 3px;
+    border-radius: 5px;
+    transform: scale(1.5);
+    transition: all .5s;
+}
+
+.linkedin-color{
+    color: blue;
+}
+
+.instagram-color{
+    color: darkmagenta;
+}
+
+.facebook-color{
+    color: blue;
+}
+
+.github-color{
+    color: black;
+}
+
+/*Grid*/
+.row {
+    max-width: 114rem;
+    margin: 0 auto; 
+}
+    .row:not(:last-child) {
+      margin-bottom: 8rem; 
+    }
+    .row::after {
+      content: "";
+      display: table;
+      clear: both; 
+    }
+    .row [class^="col-"] {
+      float: left; 
+    }
+    .row [class^="col-"]:not(:last-child) {
+        margin-right: 6rem; 
+    }
+    .row .col-1-of-2 {
+      width: calc((100% - 6rem) / 2); 
+    }
+    .row .col-1-of-3 {
+      width: calc((100% - 2 * 6rem) / 3); 
+    }
+    .row .col-2-of-3 {
+      width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); 
+    }
+    .row .col-1-of-4 {
+      width: calc((100% - 3 * 6rem) / 4); 
+    }
+    .row .col-2-of-4 {
+      width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); 
+    }
+    .row .col-3-of-4 {
+      width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); 
+    }
+/*Video*/
+.video-container{
+    border: black;
+}
+    
+.back-vid-1{
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        filter: blur(1px);
+        overflow: hidden;
+}
