@@ -74,11 +74,9 @@
     z-index: 300;
     height: 4rem;
     margin-left: 4rem;
-    transform: translateY(-3.7rem);
+    transform: translateY(-3.8rem);
     width: max-content;
     font-size: 3rem;
-    padding-top: 1px;
-    padding-bottom: 1px;
     padding-right: .5rem;
     padding-left: .5rem;
 }
@@ -133,7 +131,7 @@
     height: 3rem;
     width: auto;
     margin-right: 15%;
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 1rem;
     cursor: pointer;
     outline-offset: .5rem;
@@ -146,7 +144,8 @@
 }
 
 .back-solid{
-    background-color: rgb(5, 45, 85);
+    /*background-color: rgb(5, 45, 85);*/
+    background-color: rgba(88, 0, 105, 0.959);
 }
 
 .heading-primary{
@@ -421,16 +420,16 @@
 @keyframes moveInLeftNav {
     0% {
         opacity: 0;
-        transform: translate(-20rem, -3.7rem);
+        transform: translate(-20rem, -3.8rem);
     }
 
     80%{
-        transform: translate(1rem, -3.7rem);
+        transform: translate(1rem, -3.8rem);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, -3.7rem);
+        transform: translate(0, -3.8rem);
     }
 }
 
