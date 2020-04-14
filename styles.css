@@ -1,63 +1,8 @@
-@keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(20rem); }
-    80% {
-      transform: translateX(-1rem); }
-    100% {
-      opacity: 1;
-      transform: translate(0); } 
-}
-
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20rem);
-    }
-
-    80%{
-        transform: translateX(1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-10rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInScaled {
-    0% {
-        opacity: 0;
-        transform:scale(0);
-    }
-
-    50% {
-        opacity: .5;
-        transform:scale(.5);
-    }
-
-    100% {
-        opacity: 1;
-        transform:scale(1);
-    }
-}
-
 .main{
     margin-top: 1rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    position: relative;
 }
 
 .body{
@@ -66,6 +11,76 @@
 
 *{
     font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-top{
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-right: 3rem;
+    opacity: .6;
+    height: 4rem;
+    z-index: 200;
+}
+
+.nav-top:hover{
+    opacity: 1;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.nav-side{
+    width: 4rem;
+    position: fixed;
+    z-index: 400;
+    left: 1.8rem;
+    margin-top: 10rem;
+    cursor: pointer;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+.nav-side-item{
+    height: 4rem;
+    opacity: .6;
+}
+
+.nav-side-item:hover{
+    opacity: 1;
+}
+
+.nav-side-item:hover .nav-side-item-text{
+    opacity: 1;
+    visibility: visible;
+    animation-name: moveInLeftNav;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+}
+
+.nav-side-icon{
+    padding: 5px;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+.nav-side-item-text{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 300;
+    height: 4rem;
+    margin-left: 4rem;
+    transform: translateY(-3.7rem);
+    width: max-content;
+    font-size: 3rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: .5rem;
+    padding-left: .5rem;
 }
 
 .parallax {
@@ -132,7 +147,6 @@
 
 .back-solid{
     background-color: rgb(5, 45, 85);
-    opacity: 1;
 }
 
 .heading-primary{
@@ -149,9 +163,10 @@
     box-shadow: 0 3rem 6rem rgba(black, .1);
     background-color:rgba(white, .6);
     border-radius: 3px;
-    padding-top: 2rem;
+    padding-top: 5rem;
     top: 0;
     position: absolute;
+    margin-left: 3rem;
 }
 
 .main-photo .shape{
@@ -262,6 +277,7 @@
     transform: skewX(-20deg);
     overflow: hidden;
     margin-top: 5%;
+    margin-left: 5%;
 }
 
 .contact-text{
@@ -285,10 +301,9 @@
 }
 
 .copyright-text{
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: whitesmoke;
     letter-spacing: .2rem;
-    margin-top: 30%;
 }
 
 .social-icon{
@@ -374,4 +389,76 @@
         object-fit: cover;
         filter: blur(1px);
         overflow: hidden;
+}
+
+@keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20rem); }
+    80% {
+      transform: translateX(-1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } 
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeftNav {
+    0% {
+        opacity: 0;
+        transform: translate(-20rem, -3.7rem);
+    }
+
+    80%{
+        transform: translate(1rem, -3.7rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, -3.7rem);
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInScaled {
+    0% {
+        opacity: 0;
+        transform:scale(0);
+    }
+
+    50% {
+        opacity: .5;
+        transform:scale(.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform:scale(1);
+    }
 }
